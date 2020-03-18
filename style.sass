@@ -20,6 +20,9 @@ body
 
 nav
     padding: 8px
+    background-color: rgba(0, 0, 0, 0.2)
+    height: 72px
+    z-index: 2
     & ul
         float: right
         & li
@@ -28,7 +31,7 @@ nav
             & a 
                 display: inline-block
                 outline: none
-                color: #000
+                color: #fff
                 text-transform: uppercase
                 text-decoration: none
                 font-size: 14px
@@ -41,7 +44,7 @@ nav
     margin-left: 16px
     margin-top: 8px
     & a
-        color: #000
+        color: #fff
         text-transform: uppercase
         font-weight: 700
         font-size: 18px
@@ -116,7 +119,7 @@ nav ul li:last-child
         display: block
         width: 20px
         height: 2px
-        background: #000
+        background: #fff
         border-radius: 2px
         margin-left: 14px
     .nav-btn i:nth-child(1)
@@ -131,8 +134,23 @@ nav ul li:last-child
     transform: rotate(45deg)
 
 #nav:checked + .nav-btn i
-    background: #
+    background: #000
     transition: transform 0.2s ease
+#nav:checked + .nav-btn i:nth-child(1)
+    transform: translateY(6px) rotate(180deg)
+#nav:checked + .nav-btn i:nth-child(2)
+    opacity: 0
+#nav:checked + .nav-btn i:nth-child(3)
+    transform: translateY(-6px) rotate(90deg)
+#nav:checked ~ .nav-wrapper
+    z-index: 9990
+    opacity: 1
+#nav:checked ~ .nav-wrapper ul li a
+    opacity: 1
+    transform: translateX(0)
+
+.hidden
+    display: none
 
     
 
