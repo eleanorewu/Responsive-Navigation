@@ -4,7 +4,7 @@
           box-sizing: border-box;
 }
 
-html, body {
+html {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -12,6 +12,10 @@ html, body {
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
   font-family: 'Poppins', sans-serif, 微軟正黑體;
   font-weight: 400;
   background: url(background-img.jpg);
@@ -23,10 +27,36 @@ nav {
   padding: 8px;
 }
 
+nav ul {
+  float: right;
+}
+
+nav ul li {
+  display: inline-block;
+  float: left;
+}
+
 .logo {
   float: left;
   padding: 8px;
   margin-left: 16px;
   margin-top: 8px;
+}
+
+.logo a {
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0;
+  text-decoration: none;
+}
+
+nav ul li:not(:first-child) {
+  margin-left: 48px;
+}
+
+nav ul li:last-child {
+  margin-right: 24px;
 }
 /*# sourceMappingURL=style.css.map */
